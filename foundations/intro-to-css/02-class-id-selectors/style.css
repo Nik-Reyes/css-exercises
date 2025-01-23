@@ -1,0 +1,24 @@
+.odd-banner {
+  background-color: #f9856b;
+  font-family: Verdana, DejaVu, sans-serif;
+  font-size: 24px;
+}
+
+.large-text {
+  font-size: 36px;
+}
+
+#first,
+#second {
+  font-family: "Times New Roman", Times, serif;
+}
+
+#first {
+  font-size: 60px;
+  color: rgb(36, 51, 220);
+}
+
+#second {
+  background-color: rgb(153, 230, 104);
+  font-weight: bold;
+}
