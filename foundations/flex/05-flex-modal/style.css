@@ -1,6 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-html, body {
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  box-sizing: inherit;
   height: 100%;
 }
 
@@ -19,7 +27,23 @@ body {
   background: white;
   width: 480px;
   border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  display: flex;
+}
+
+.true-left {
+  display: flex;
+  gap: 15px;
+}
+.header {
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.text {
+  margin-bottom: 15px;
 }
 
 .icon {

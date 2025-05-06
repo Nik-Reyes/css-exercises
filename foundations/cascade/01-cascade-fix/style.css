@@ -8,20 +8,37 @@ body {
   font-weight: 800;
 }
 
-.small-para {
+/* 
+
+there is a <p> element which contains both .para and .small-para. 
+.para and .small-para have a font-size property that differs from one 
+another. The question is then, for the p tag with both of these classes, 
+which font size will it take on?
+
+This will be answered using the three main CSS factors
+1.) Specificity: both are classes, neither rule is more specific
+2.) Inheritance: inheritance of font-size does not apply here given that these properties are explicitly defined in both 
+3.) Rule order: .small-para is defined last so it takes on font-size 14
+
+
+If small-para was an ID it could be placed wherever and still take the font size 14!
+
+Another way to do this is by chaining:
+.para.small-para {
   font-size: 14px;
   font-weight: 800;
 }
 
+
+*/
 .para {
   font-size: 22px;
 }
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -29,7 +46,13 @@ body {
   font-size: 20px;
 }
 
-.child {
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+}
+
+.text.child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
