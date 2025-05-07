@@ -1,10 +1,15 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  /* grid-template-rows: 100px auto 50px; */
+  gap: 4px;
 }
 
 .container div {
@@ -17,6 +22,30 @@
 
 .header {
   background-color: #393f4d;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  align-items: center;
+  gap: 1em;
+}
+
+ul {
+  list-style: none;
+}
+
+:where(.menu, .nav) ul {
+  display: grid;
+}
+
+.menu ul {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  background-color: green;
+  text-align: right;
+}
+
+.nav ul {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .menu ul,
@@ -24,8 +53,17 @@
   font-size: 16px;
 }
 
+.menu li {
+  background-color: red;
+}
+
 .sidebar {
-  background-color: #C50208;
+  background-color: #c50208;
+}
+
+.logo {
+  text-wrap: nowrap;
+  grid-column: 1;
 }
 
 .sidebar .photo {
@@ -36,7 +74,6 @@
   border-radius: 10px;
 }
 
-
 .sidebar .side-content {
   background-color: white;
   color: black;
@@ -45,7 +82,7 @@
 }
 
 .nav {
-  background-color: #C50208;
+  background-color: #c50208;
 }
 
 .nav ul li {
@@ -65,7 +102,7 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-align: center;
 }
